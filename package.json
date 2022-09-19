@@ -2,16 +2,14 @@
   "name": "my-first-webpack",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/pmpeloc/my-first-webpack.git",
+  "author": "Pablo Misael Peloc <pmpeloc@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "start": "yarn webpack --config ./webpack.config.js"
-  },
   "dependencies": {
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^5.5.0",
     "webpack-dev-server": "^4.11.1"
   }
 }

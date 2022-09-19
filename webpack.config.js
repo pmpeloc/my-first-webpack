@@ -8,11 +8,26 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(process.cwd(), 'src', 'index.html'),
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: { interpolate: true },
+      },
+      {
+        test: /\.(sass|scss)$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
+  },
   devServer: {
-    static: {
-      directory: path.join(process.cwd(), 'dist'),
-    },
+    contentBase: path.join(process.cwd(), 'dist'),
     compress: true,
     port: 8050,
   },

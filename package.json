@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "yarn webpack --config ./webpack.config.js"
+  },
   "dependencies": {
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
     "webpack-dev-server": "^4.11.1"
   }
 }
